@@ -1,0 +1,48 @@
+http://localhost:9001/departments/
+
+{
+    "departmentName":"IT",
+    "departmentAddress":"Wing3 Clust B 3rd Floor",
+    "departmentCode":"IT001"
+}
+
+http://localhost:9001/users/
+{
+    "userName":"Farihal",
+    "email":"farihal@gmail.com",
+    "departmentId": 1
+}
+Response:
+{
+    "userId": 1,
+    "userName": "Farihal",
+    "email": "farihal@gmail.com",
+    "departmentId": 1
+}
+
+http://localhost:9002/users/1
+Response:
+{
+    "userId": 1,
+    "userName": "Farihal",
+    "email": "farihal@gmail.com",
+    "departmentId": 1
+}
+
+
+http://localhost:9002/users/userdepartment/1
+Response:
+{
+    "user": {
+        "userId": 1,
+        "userName": "Farihal",
+        "email": "farihal@gmail.com",
+        "departmentId": 1
+    },
+    "department": {
+        "departmentId": 1,
+        "departmentName": "IT",
+        "departmentAddress": "Wing3 Clust B 3rd Floor",
+        "departmentCode": "IT001"
+    }
+}
